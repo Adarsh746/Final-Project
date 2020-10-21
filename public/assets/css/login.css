@@ -1,0 +1,9 @@
+/* CSS Document */
+html{ background-color:#FFFFFF !important; }
+body{background-color:#FFFFFF !important; }
+#login h1{ width:500px; margin:0 auto;}
+#login h1 a {background:url(../images/admin_logo.png) no-repeat top;
+width:182px;
+height:69px;	
+margin-left:65px;
+}

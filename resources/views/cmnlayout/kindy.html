@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<header>
+	<div class="wrapper">
+		<div class="logo">
+			<img src="/images/multy-user.png" alt="">
+		</div>
+		<ul class="na-area">
+			<li><a href="#">Home</li>
+				<li><a href="#">About</li>
+					<li><a href="#">services</li>
+		</ul>
+	</div>	
+	<div class="welcome-text">
+		<h1>Legis Eye</h1>
+		<a href="#">Contact Us</a>
+	</div>
+
+	</header>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<!-- 
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.7
+Version: 4.7.5
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Dribbble: www.dribbble.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+
+    <head>
+    @include('user.includes.head')
+    
+      </head>
+    <!-- END HEAD -->
+
+    <body class="page-header-fixed   page-content-white "style="backgroundcolor:">
+        <div class="page-wrapper">
+            <!-- BEGIN HEADER -->
+            <div class="page-header navbar navbar-fixed-top">
+                <!-- BEGIN HEADER INNER -->
+                <div class="page-header-inner ">
+                    <!-- BEGIN LOGO -->
+                    <div class="page-logo">
+                        <a href="index.html">
+                        <h4 style="color:white ;font-size: 26px;font-weight: 1000;margin-left: 15px;"><span style="color:red">Thanuz</span></h2> </a>
+                        </a>
+                        <div class="menu-toggler sidebar-toggler">
+                            <span></span>
+                        </div>
+                    </div>
+                    <!-- END LOGO -->
+                    <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                    <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span></span>
+                    </a>
+                    <!-- END RESPONSIVE MENU TOGGLER -->
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="top-menu">
+                    @include('includes.top_nav')
+                    
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END HEADER INNER -->
+            </div>
+        
+            <div class="page-container" style="background-color: white;">
+                <!-- BEGIN SIDEBAR -->
+                <!-- END SIDEBAR -->
+                <!-- BEGIN CONTENT -->
+                <div class="container" style="background-color:white">
+                    <!-- BEGIN CONTENT BODY -->              
+                    <div class="page-content" >
+                        <!-- BEGIN PAGE HEADER-->
+                        <!-- BEGIN THEME PANEL -->                       
+                        <div class="text-center "  >
+                            <img src="/images/multy-user.png" style="max-width:350px;max-height:350px">
+                                <ul style="padding-left:0px" >
+                                    <li style="display:inline-flex">
+                                        <a href="{{route('user.login')}}" style="color:red">
+                                            <i class="icon-user" ></i>User&nbsp;
+                                        </a>
+                                    </li>
+                                    <li style="display:inline-flex">
+                                        <a href="{{ route('franchise.login') }}" style="color:red">
+                                            <i class="fa fa-building-o"></i>Franchise&nbsp;
+                                        </a>
+                                    </li>
+                                    <li style="display:inline-flex">
+                                        <a href="{{ route('admin.login') }}" style="color:red">
+                                        <i class="fa fa-user-secret"></i>Admin&nbsp;
+                                           
+                                        </a>
+                                    </li>
+                                </ul>
+                        </div>                  
+                            <div class="text-center" >                      
+                                <!-- <h1 style="color:cornflowerblue;font-size: 40px;font-style: oblique;">Your future starts here</h1>            -->
+                                <p>Find anything near you</p>
+                                <div class="main-search-form-wrapper">
+                                    <form action="{{ route('search.index') }}" method="GET" class="jobs-search-form" >
+                                        {{csrf_field()}}
+                                        <div class="form-holder">
+                                        <div class="row gap-3 text-center">
+                                            <div class="col-md-4 text-center">
+                                            </div>
+                                            <div class="col-md-4 text-center">
+                                                <input class="typewrite form-control text-center"  type="text" name="search" placeholder="Looking for somthing"  name="keywords" />
+                                            
+                                                <div class="btn-holder">
+                                                    <button type="submit" class="btn btn-outline btn-circle btn-md blue" style="pull:right;margin:5px"><i class="fa fa-search">search</i></button>  
+                                                 </div>   
+                                            </div>  
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+   
+        <!-- END QUICK NAV -->
+        <!--[if lt IE 9]>
+<script src="../assets/global/plugins/respond.min.js"></script>
+<script src="../assets/global/plugins/excanvas.min.js"></script> 
+<script src="../assets/global/plugins/ie8.fix.min.js"></script> 
+<![endif]-->
+        <!-- BEGIN CORE PLUGINS -->
+       @include('cmnlayout.foot')
+    </body>
+
+</html>

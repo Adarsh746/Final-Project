@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Adobe Photoshop CS6
+Comment=PlayOnLinux
+Type=Application
+Exec=/usr/share/playonlinux/playonlinux --run "Adobe Photoshop CS6" %F
+Icon=/home/lz-cy-127/.PlayOnLinux//icones/full_size/Adobe Photoshop CS6
+Name[fr_FR]=Adobe Photoshop CS6
+StartupWMClass=Photoshop.exe
+Categories=
