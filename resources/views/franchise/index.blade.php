@@ -4,65 +4,59 @@
 @section('content')
 <div class="row">
                             <div class="col-md-6">
-                                <div class="portlet light form-fit bordered">
+                                <div class="portlet grey form-fit bordered">
                                     <div class="portlet-title" style="background-color:#364150">
                                         <div class="caption">
                                             <i class="fa fa-user font-green"></i>
-                                            <span class="caption-subject font-green bold uppercase">Lawyer</span>
+                                            <span class="caption-subject font-green bold uppercase">Labourer</span>
                                         </div>
                                        
                                     </div>
                                     <div class="portlet-body form">
                                         <div class="mt-clipboard-container">
                                         <div>
-                                            <h4 class="profile-desc-title " style="color:black">Personal Info</h4>
-                                            <label class="control-label bold" style="color:red">Lawyer id :&nbsp;</label>
+                                            <h4 class="profile-desc-title " style="color:navy">PERSONAL INFO </h4>
+
+                                             <img src="/franchise/images/{{Auth::user()->image}}" style="max-height:100px; max-width:100px"><br>
+                                            <label class="control-label bold" style="color:red">Labourer id :&nbsp;</label>
                                             {{Auth::user()->franchise_id}}<br>
                                             <label class="control-label bold" style="color:red"> Name :&nbsp;</label>
                                             {{ Auth::user()->franchise_name }}<br>
-                                            <label class="control-label bold" style="color:red">Contact :&nbsp;</label>
+
+                                            <label class="control-label bold" style="color:red">Aadhaar Id :&nbsp;</label>
+                                            {{Auth::user()->aadhar_number}}<br>
+                                            <label class="control-label bold" style="color:red">DOB :&nbsp;</label>
+                                            {{Auth::user()->DOB}}<br>
+
+                                            <label class="control-label bold" style="color:red">Contact1 :&nbsp;</label>
                                             {{Auth::user()->contact}}<br>
-                                            <label class="control-label bold" style="color:red">Nation :&nbsp;</label>
+                                            <label class="control-label bold" style="color:red">Contact2 :&nbsp;</label>
+                                            {{Auth::user()->contact1}}<br>
+
+                                            <label class="control-label bold" style="color:red">Blood Group :&nbsp;</label>
+                                            {{Auth::user()->blood_group}}<br>
+
+                                            <label class="control-label bold" style="color:red">Permanent Address :&nbsp;</label>
+                                            {{Auth::user()->prem_address}}<br>
+
+                                            <label class="control-label bold" style="color:red">Current Address :&nbsp;</label>
+                                            {{Auth::user()->curr_address}}<br>
+
+                                            <label class="control-label bold" style="color:red">Email :&nbsp;</label>
+                                            {{Auth::user()->email}}<br>
+
+                                          
+<br>
+
+
                                             
-                                           
-                                        <a href="{{URL::route('franchise.emp.show',auth::user()->franchise_id)}}"class="btn btn-primary green circle">Edit</a>
-                                            </div>
                                     </div>
+
                                 </div>
+
                             </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="portlet light form-fit bordered">
-                                    <div class="portlet-title" style="background-color:#364150">
-                                        <div class="caption">
-                                            <i class="fa  fa-industry  font-green"></i>
-                                            <span class="caption-subject font-green bold uppercase">{{ Auth::user()->franchise_name }}</span>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="portlet-body form">
-                                       
-                                        <div class="mt-clipboard-container">
-                                        <h4 class="profile-desc-title " style="color:black">Account Activity</h4>
-                                        <div>
-                                        <div class="portlet light ">
-                                        <!-- STAT -->
-                                        <div class="row list-separated profile-stat">
-                                            
-                                            <div class="col-md-3 col-sm-4 col-xs-4">
-                                                <div class="uppercase profile-stat-title">  </div>
-                                                <div class="uppercase profile-stat-text"> Pending Cases </div>
-                                            </div>
-                                            <div class="col-md-3 col-sm-4 col-xs-4">
-                                                <div class="uppercase profile-stat-title">  </div>
-                                                <div class="uppercase profile-stat-text"> Client No </div>
-                                            </div>
-                                            <div class="col-md-3 col-sm-4 col-xs-4">
-                                                <div class="uppercase profile-stat-title">  </div>
-                                                <div class="uppercase profile-stat-text"> Assigned Cases </div>
-                                            </div>
-                                            
-                                        </div>
+                           
                                         <!-- END STAT -->
                                       
                                    

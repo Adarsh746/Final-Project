@@ -26,7 +26,7 @@
                             <!-- END NOTIFICATION DROPDOWN -->
                             <!-- BEGIN INBOX DROPDOWN -->
                             <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                            <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
+                           <!--  <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                     <i class="icon-envelope-open"></i>
                                     <span class="badge badge-default"id="unread"></span>
@@ -45,7 +45,7 @@
                                         </ul>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <!-- END INBOX DROPDOWN -->
                             <!-- BEGIN TODO DROPDOWN -->
                             <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
@@ -80,30 +80,17 @@
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
                                     <li>
-                                        <a href="page_user_profile_1.html">
+                                        <a href="{{ route('admin.home') }}">
                                             <i class="icon-user"></i> My Profile </a>
                                     </li>
+                                   
                                     <li>
-                                        <a href="app_calendar.html">
-                                            <i class="icon-calendar"></i> My Calendar </a>
-                                    </li>
-                                    <li>
-                                        <a href="app_inbox.html">
-                                            <i class="icon-envelope-open"></i> My Inbox
-                                            <span class="badge badge-danger"> 3 </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="app_todo.html">
+                                        <a href="{{ route('admin.emp.create') }}">
                                             <i class="icon-rocket"></i> My Tasks
-                                            <span class="badge badge-success"> 7 </span>
+                                            
                                         </a>
                                     </li>
-                                    <li class="divider"> </li>
-                                    <li>
-                                        <a href="page_user_lock_1.html">
-                                            <i class="icon-lock"></i> Lock Screen </a>
-                                    </li>
+                                    
                                     <li>
                                         <a href="{{ route('admin.logout') }}"
                                             onclick="event.preventDefault();

@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Legis Eye</title>
+    <title>Labours Online</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/franchise') }}">
-                    <h1 style="color:white;font-weight: 1000;margin-top: -10px;"><span style="color:red">Legis Eye</span></h2>
+                    <h1 style="color:white;font-weight: 1050;margin-top: -10px;"><span style="color:red">LABOURS ONLINE</span></h2>
                     </a>
                 </div>
 

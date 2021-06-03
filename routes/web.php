@@ -90,6 +90,12 @@ Route::group(['namespace'=>'Admin','prefix'=>'admin','as'=>'admin.'],function(){
         Route::get('home/openView/{id}', 'HomeController@openView')->name('home.openView');
         Route::resource('doctor','DoctorController');
         Route::post('doctor/change/{id}', 'DoctorController@change')->name('doctor.change');
+        Route::resource('meeting','MeetingController');
+        Route::post('meeting/change/{id}', 'MeetingController@change')->name('meeting.change');
+        Route::resource('case','CaseController');
+        Route::post('case/change/{id}', 'CaseController@change')->name('case.change');
+        Route::resource('rent','RentController');
+        Route::post('rent/change/{id}', 'RentController@change')->name('rent.change');
 
         
         
@@ -111,6 +117,7 @@ Route::group(['namespace'=>'Admin','prefix'=>'admin','as'=>'admin.'],function(){
         Route::get('/showcity/{id}', 'Auth\RegisterController@showcity')->name('showcity');
         Route::get('/showsubcat/{id}', 'Auth\RegisterController@showsubcat')->name('showsubcat');
 
+
         Route::get('/', function () {
             return view('user.welcome');
         });
@@ -126,6 +133,7 @@ Route::group(['namespace'=>'Admin','prefix'=>'admin','as'=>'admin.'],function(){
             Route::resource('ticket','TicketController');
             Route::get('home/show', 'HomeController@show')->name('home.show');
             Route::get('home/msg/{id}', 'HomeController@msg')->name('home.msg');
+            Route::get('home/edit', 'HomeController@edit')->name('home.edit');
             Route::post('home/send', 'HomeController@send')->name('home.send');
             Route::resource('shop','ShopController');
         Route::post('shop/change/{id}', 'ShopController@change')->name('shop.change');
@@ -143,7 +151,29 @@ Route::group(['namespace'=>'Admin','prefix'=>'admin','as'=>'admin.'],function(){
         Route::resource('shoppro','ShoppingProductController');
        Route::resource('hospital','HospitalController');
         Route::post('hospital/change/{id}', 'HospitalController@change')->name('hospital.change');
-       
+       Route::resource('meeting','MeetingController');
+        Route::post('meeting/change/{id}', 'MeetingController@change')->name('meeting.change');
+        Route::resource('emp','empController');
+        Route::post('emp/change/{id}', 'empController@change')->name('case.change');
+        Route::resource('case','CaseController');
+        Route::post('case/change/{id}', 'CaseController@change')->name('case.change');
+        Route::resource('rent','RentController');
+        Route::post('rent/change/{id}', 'RentController@change')->name('rent.change');
+        Route::resource('tool','ToolController');
+        Route::post('tool/change/{id}', 'ToolController@change')->name('tool.change');
+        Route::resource('User','UserController');
+        Route::get('user.edit', 'UserController@edit')->name('user.edit');
+        Route::post('user/change/{id}', 'UserController@change')->name('user.change');
+        Route::resource('tool','ToolController');
+        Route::post('tool/change/{id}', 'ToolController@change')->name('tool.change');
+        Route::resource('work','WorkController');
+        Route::get('work/show', 'WorkController@show')->name('work.show');
+        Route::post('work/change/{id}', 'WorkController@change')->name('work.change');
+        Route::resource('book','BookController');
+        Route::post('book/change/{id}', 'BookController@change')->name('book.change');
+        Route::post('book/show', 'BookController@show')->name('book.show');
+
+ 
  
         
 
@@ -179,6 +209,9 @@ Route::group(['namespace'=>'Franchise','prefix'=>'franchise','as'=>'franchise.']
         Route::get('home/show', 'HomeController@show')->name('home.show');
         Route::get('home/msg/{id}', 'HomeController@msg')->name('home.msg');
         Route::post('home/send', 'HomeController@send')->name('home.send');
+        // Route::get('home/edit', 'HomeController@edit')->name('home.edit');
+        Route::post('home/update', 'HomeController@edit')->name('home.update');
+        Route::post('home/change/{id}', 'HomeController@change')->name('home.change');
         Route::resource('shop','ShopController');
         Route::post('shop/change/{id}', 'ShopController@change')->name('shop.change');
         Route::resource('post','PostController');
@@ -203,7 +236,30 @@ Route::group(['namespace'=>'Franchise','prefix'=>'franchise','as'=>'franchise.']
         Route::resource('doctor','DoctorController');
         Route::post('doctor/change/{id}', 'DoctorController@change')->name('doctor.change');
         Route::resource('user','UserController');
-        Route::post('user/update/{id}', 'UserController@update')->name('user.update');
+        Route::any('user/update/{id}', 'UserController@update')->name('user.update');
+        Route::resource('meeting','MeetingController');
+        Route::post('meeting/change/{id}', 'MeetingController@change')->name('meeting.change');
+        Route::resource('case','CaseController');
+        Route::any('case/change/{id}', 'CaseController@change')->name('case.change');
+        Route::resource('rent','RentController');
+        Route::post('rent/change/{id}', 'RentController@change')->name('rent.change');
+        Route::resource('emp','EmpController');
+        Route::get('emp/show', 'EmpController@show')->name('emp.show');
+       Route::get('emp.change', 'EmpController@change')->name('emp.edit');
+        Route::get('emp.edit', 'EmpController@edit')->name('emp.edit');
+        Route::post('emp/change/{id}', 'EmpController@change')->name('emp.change');
+        Route::resource('tool','ToolController');
+        Route::post('tool/change/{id}', 'ToolController@change')->name('tool.change');
+        Route::resource('work','WorkController');
+        Route::get('work/change', 'WorkController@change')->name('work.change');
+        Route::resource('book','BookController');
+        Route::post('book/change/{id}', 'BookController@change')->name('book.change');
+        Route::post('book/show', 'BookController@show')->name('book.show');
+
+
+
+
+
 
        
         

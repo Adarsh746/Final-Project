@@ -30,27 +30,8 @@
                     
                         </div>
 
-                  <div class="form-group{{ $errors->has('user_id') ? ' has-error' : '' }}">
-                            
-                    
-                        <label for="user_id" class="col-md-4 control-label">Owner</label>
-
-                        <div class="col-md-6">      
-                        <select id="user_id"  class="form-control" name="user_id" value="{{ old('user_id') }}" required autofocus>
-                        @foreach ($user as $nat)
-                               <option value="{{$nat->user_id}}">{{$nat->user_name}}</option>
-                               @endforeach
-                        </select>
-
-                             
-                                @if ($errors->has('user_id'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('user_id') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                        
+                   
+                         
                         <div class="form-group{{ $errors->has('shop_cat_name') ? ' has-error' : '' }}">
                             <label for="shop_cat_name" class="col-md-4 control-label"> Shop Category</label>
                             <div class="col-md-6">
@@ -335,7 +316,7 @@
                             <label class="col-md-4 control-label ">Image</label>
                             <div class="col-md-6">
                                 <input class="form-control placeholder-no-fix" type="file" placeholder="image4" name="image4"> 
-                                @if ($errors->has('image1'))
+                                @if ($errors->has('image4'))
                                 <span class="help-block">
                                     <strong>{{$errors->first('image4')}}</strong>
                                 </span>

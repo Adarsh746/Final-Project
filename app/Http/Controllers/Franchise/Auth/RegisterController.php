@@ -30,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/franchise/login';
 
     /**
      * Create a new controller instance.
@@ -53,6 +53,7 @@ class RegisterController extends Controller
 
         return Validator::make($data, [
             'employeer_name' => 'required|string|max:255',
+             'skills' => 'required|string|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|string|min:6',
             'prem_address' => 'required|string',
@@ -61,7 +62,7 @@ class RegisterController extends Controller
              'blood_group' => 'required',
              'post_office_id' => 'required',
              'aadhar_number' => 'required|digits:12|max:12|min:12'
-            
+             
 
         ]);
     }
@@ -105,7 +106,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'aadhar_number' => $data['aadhar_number'],
             'password' => bcrypt($data['password']),
-            
+            'skills' => $data['skills']
         ]);
     }
     public function showRegistrationForm()

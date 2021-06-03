@@ -54,10 +54,11 @@ class UserController extends Controller
         ->leftjoin('states', 'users.state_id', '=', 'states.state_id')
         ->leftjoin('districts', 'districts.district_id', '=', 'users.district_id')
         // ->leftjoin('job_preferences', 'users.user_id', '=', 'job_preferences.user_id')
-        ->select('users.user_id','users.image','users.email','users.state_id','users.district_id','users.nation_id','users.user_name','users.contact','users.dob','nations.nation_id','states.state_id','nations.nation_name','states.state_name','districts.district_name')
+        ->select()
         ->where('users.account_status', '=', 0)
         ->where('users.user_id', '=', Auth::user()->user_id )
-        ->first();        
+        ->first(); 
+               
         // $app = DB::table('applications')
         // ->where('user_id','=',Auth::user()->user_id)
         
@@ -121,10 +122,71 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+                $user =DB::table('users')
+        ->leftjoin('nations', 'users.nation_id', '=', 'nations.nation_id')
+        ->leftjoin('states', 'users.state_id', '=', 'states.state_id')
+        ->leftjoin('districts', 'districts.district_id', '=', 'users.district_id')
+        // ->where('franchises.franchise_id', '=', $id)
+        ->select()
+        ->where('users.account_status', '=', 0)
+        ->where('users.user_id', '=', Auth::user()->user_id )
+
+        
+    //$this->authorize('modifyFranchises', auth()->user());
+    ->first(); 
+    
+        
+         
+        return view('user.edit', compact('user'));     
     }
+     public function change(Request $request, $id)
+    {
+       
+     
+
+        // $franchise = (Auth::user()->franchise_id);
+        // // $rent = Auth::rent();
+        $image1 = null;
+       
+     if ($request['image']) {
+        $image = time() . '1.' . $request->file('image')->Extension();
+        $request['image']->move(
+        base_path() . '/public/user/images/', $image1
+    );
+      }
+      
+       // $this->validate($request, [
+       //     'tool_name' => 'required',
+       //     'place_id' => 'required',
+       //     'tool_image' => 'required',
+       //     'tool_count' => 'required'
+           
+
+         // ]);
+           $user =User::find($id);
+
+            $user ->user_name = $request->user_name;   
+            $user->email = $request->email;
+            
+            $user ->contact = $request->contact;
+             $user ->address = $request->address;
+            // $user ->post_office_name = $request->post_office_name;
+            
+           
+            if($image1){
+                     $user->image = $image1;
+                }
+                
+               $user->save();
+                
+             
+
+          // return view('table');
+        return redirect()->route('user.home')->with('success','Edited Successfully');
+    }
+
 
     /**
      * Update the specified resource in storage.

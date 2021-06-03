@@ -15,7 +15,7 @@ class Franchise extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'franchise_id','franchise_name','email','password','contact','contact1','DOB','blood_group','account_status','aproval_status','nation_id','state_id','district_id','post_office_id','image','aadhar_number','prem_address','curr_address','remember_token',
+        'franchise_id','franchise_name','email','password','contact','contact1','DOB','blood_group','account_status','aproval_status','nation_id','state_id','district_id','post_office_id','image','aadhar_number','prem_address','curr_address','remember_token','skills',
 
     ];
 

@@ -7,7 +7,7 @@
         <div class="portlet-title">
             <div class="caption">
                 <i class="icon-settings font-red"></i>
-                <span class="caption-subject font-red sbold uppercase">Shop</span>
+                <span class="caption-subject font-red sbold uppercase">View Shops</span>
             </div>
 
         </div>
@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="btn-group">
-                            <a type="button" href="{{URL::route('admin.shop.create')}}" class="btn green" >Add New</a>
+                            <a type="button" href="{{URL::route('admin.shop.create')}}" class="btn green" >Add New Shop Deatails</a>
 
 
                         </div>
@@ -38,13 +38,13 @@
                             <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" Full Name : activate to sort column ascending">  Open Time </th>
                             <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" Full Name : activate to sort column ascending"> Close Time </th>
 
-                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" Full Name : activate to sort column ascending">  Logo </th>
-                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" Full Name : activate to sort column ascending">  Banner </th>
-                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" Full Name : activate to sort column ascending">  Image </th>
-                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" Full Name : activate to sort column ascending">  Image </th>
-                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" Full Name : activate to sort column ascending">  Image </th>
-                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" Full Name : activate to sort column ascending">  Image </th>
-                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" Full Name : activate to sort column ascending">  Image </th>
+                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="max-height:100px;" " max-width:100px;" aria-label=" Full Name : activate to sort column ascending">  Logo </th>
+                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="max-height:100px; max-width:100px;" aria-label=" Full Name : activate to sort column ascending">  Banner </th>
+                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="max-height:100px;" " max-width:100px;" aria-label=" Full Name : activate to sort column ascending">  Image </th>
+                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="max-height:100px;" " max-width:100px;" aria-label=" Full Name : activate to sort column ascending">  Image </th>
+                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="max-height:100px;" " max-width:100px;" aria-label=" Full Name : activate to sort column ascending">  Image </th>
+                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="max-height:100px;" " max-width:100px;" aria-label=" Full Name : activate to sort column ascending">  Image </th>
+                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="max-height:100px;" " max-width:100px;" aria-label=" Full Name : activate to sort column ascending">  Image </th>
                             <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" Full Name : activate to sort column ascending">  Website </th>
                             <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" Full Name : activate to sort column ascending">  Facebook </th>
                             <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" Full Name : activate to sort column ascending">  Instagram </th>
@@ -73,19 +73,19 @@
                                 <td class="sorting_1"> {{ $value->address }}</td>
                                 <td class="sorting_1"> {{ $value->open_time }}</td>
                                 <td class="sorting_1"> {{ $value->close_time }}</td>
-                                <td class="sorting_2"> <img class="dt-img" src="/shop/images/{{ $value->logo}}"></td>
-                                <td class="sorting_11"> <img class="dt-img" src="/shop/images/{{ $value->banner}}"></td>
-                               <td class="sorting_11"> <img class="dt-img" src="/shop/images/{{ $value->image1}}"></td>
-                                <td class="sorting_11"> <img class="dt-img" src="/shop/images/{{ $value->image2}}"></td>
-                                <td class="sorting_11"> <img class="dt-img" src="/shop/images/{{ $value->image3}}"></td>
-                                <td class="sorting_11"> <img class="dt-img" src="/shop/images/{{ $value->image4}}"></td>
-                                <td class="sorting_11"> <img class="dt-img" src="/shop/images/{{ $value->image5}}"></td>
-                                <td class="sorting_1"> {{ $value->website }}</td>
-                                <td class="sorting_1"> {{ $value->facebook }}</td>
-                                <td class="sorting_1"> {{ $value->instagram }}</td>
-                                <td class="sorting_1"> {{ $value->whatsapp }}</td>
-                                <td class="sorting_1"> {{ $value->youtube }}</td>
-                                <td class="sorting_1"> {{ $value->twitter }}</td>
+                               <td class="sorting_2"> <img class="dt-img" style="max-height:150px; max-width:150px;" src="/shop/images/{{ $value->logo}}"></td>
+                                <td class="sorting_11"> <img class="dt-img" style="max-height:150px; max-width:150px;" src="/shop/images/{{ $value->banner}}"></td>
+                               <td class="sorting_11"> <img class="dt-img" style="max-height:150px; max-width:150px;"src="/shop/images/{{ $value->image1}}"></td>
+                                <td class="sorting_11"> <img class="dt-img" style="max-height:150px; max-width:150px;"src="/shop/images/{{ $value->image2}}"></td>
+                                <td class="sorting_11"> <img class="dt-img"style="max-height:150px; max-width:150px;" src="/shop/images/{{ $value->image3}}"></td>
+                                <td class="sorting_11"> <img class="dt-img" style="max-height:150px; max-width:150px;"src="/shop/images/{{ $value->image4}}"></td>
+                                <td class="sorting_11"> <img class="dt-img" style="max-height:150px; max-width:150px;"src="/shop/images/{{ $value->image5}}"></td>
+                                <td class="sorting_1"><a  href="{{('www.google.com')}}"> {{ $value->website }}</a></td>
+                                <td class="sorting_1"> <a  href="{{('www.facebook.com')}}">{{ $value->facebook }}</a></td>
+                                <td class="sorting_1"> <a  href="{{('www.instagram.com')}}">{{ $value->instagram }}</a></td>
+                                <td class="sorting_1"> <a  href="{{('www.watsappweb.com')}}">{{ $value->whatsapp }}</a></td>
+                                <td class="sorting_1"> <a  href="{{('www.youtube.com')}}">{{ $value->youtube }}</a></td>
+                                <td class="sorting_1"> <a  href="{{('www.twitter.com')}}">{{ $value->twitter }}</a></td>
                                 <td class="sorting_1"> {{ $value->mobile_number }}</td>
                                 <td class="sorting_1"> {{ $value->mobile_number2 }}</td>
                                 <td class="text-center">

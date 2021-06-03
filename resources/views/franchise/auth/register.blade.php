@@ -24,7 +24,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <head>
         <meta charset="utf-8" />
-        <title>Job.in</title>
+        <title>Labours Online</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="Preview page of Metronic Admin Theme #1 for " name="description" />
@@ -55,8 +55,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <body class=" login">
         <!-- BEGIN LOGO -->
         <div class="logo">
-            <a href="index.html">
-               <h1 style="color:white;font-weight: 1000;"><span style="color:red">Legis Eye</span></h2> </a>
+            <a href="{{URL('/')}}">
+               <h1 style="color:white;font-weight: 1050;"><span style="color:red">Labourer Registration</span></h2> </a>
         </div>
         <!-- END LOGO -->
         <!-- BEGIN LOGIN -->
@@ -68,7 +68,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <p class="hint"> Enter your details below: </p>
                 <div class="form-group form-group{{ $errors->has('employeer_name') ? ' has-error' : '' }}">
                     <label class="control-label visible-ie8 visible-ie9">Franchise Name</label>
-                    <input class="form-control placeholder-no-fix" required type="text" placeholder="Lawyer Name" name="employeer_name">
+                    <input class="form-control placeholder-no-fix" required type="text" placeholder="Labourer Name" name="employeer_name">
                     @if ($errors->has('employeer_name'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('employeer_name') }}</strong>
@@ -172,6 +172,24 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </span>
                                 @endif
                 </div>
+                <div class="form-group form-group{{ $errors->has('skills') ? ' has-error' : '' }}">
+                    <label class="control-label visible-ie8 visible-ie9">Skills</label>
+                    <input class="form-control placeholder-no-fix" required type="text" placeholder="Skills" name="skills">
+                    @if ($errors->has('skills'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('skills') }}</strong>
+                                    </span>
+                                @endif
+                </div>
+               <!-- <div class="form-group form-group{{ $errors->has('skills') ? ' has-error' : '' }}">
+                    <label class="control-label "> Skills</label>
+                    <input class="form-control placeholder-no-fix" type="Textarea" placeholder="Add Skill" name="skills"> 
+                    @if ($errors->has('skills'))
+                                    <span class="help-block">
+                                        <strong>{{$errors->first('skills')}}</strong>
+                                    </span>
+                                @endif
+                </div>-->
 
                    <!--  <div class="form-group form-group{{ $errors->has('about') ? ' has-error' : '' }}">
                     <label class="control-label visible-ie8 visible-ie9 ">About</label>
@@ -284,7 +302,7 @@ License: You must have a valid license purchased only from themeforest(the above
             
         </div>
         <div>
-        <div class="copyright"  style="color:black;"> ©Thanuz </div>
+        <div class="copyright"  style="color:black;"> ©LaboursOnline </div>
         </div>
         <!--[if lt IE 9]>
 <script src="../assets/global/plugins/respond.min.js"></script>

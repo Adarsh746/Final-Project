@@ -8,7 +8,7 @@
    
     <head>
         <meta charset="utf-8" />
-        <title>Thanuz</title>
+        <title>Labours Online</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="Preview page of Metronic Admin Theme #1 for " name="description" />
@@ -39,8 +39,8 @@
     <body class=" login">
         <!-- BEGIN LOGO -->
         <div class="logo">
-            <a href="#">
-               <h1 style="color:white;font-weight: 1000;"><span style="color:red">Legis Eye</span></h2> </a>
+            <a href="{{URL('/')}}">
+               <h1 style="color:white;font-weight: 1050;"><span style="color:red">LABOURS ONLINE</span></h2> </a>
         </div>
         <!-- END LOGO -->
         <!-- BEGIN LOGIN -->
@@ -204,7 +204,7 @@
             
         </div>
         <div>
-        <div class="copyright"  style="color:black;"> ©Thanuz</div>
+        <div class="copyright"  style="color:black;"> ©LaboursOnline</div>
         </div>
         <!--[if lt IE 9]>
 <script src="../assets/global/plugins/respond.min.js"></script>

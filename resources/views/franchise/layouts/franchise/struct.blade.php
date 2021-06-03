@@ -50,7 +50,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!-- BEGIN LOGO -->
                     <div class="page-logo">
                         <a href="index.html">
-                        <h4 style="color:white ;font-size: 26px;font-weight: 1000;margin-left: 15px;"><span style="color:red">Legis Eye</span></h2> </a>
+                        <h4 style="color:white ;font-size: 26px;font-weight: 1050;margin-left: 15px;"><span style="color:red">LABOURS ONLINE</span></h2> </a>
                         <div class="menu-toggler sidebar-toggler">
                             <span></span>
                         </div>
@@ -103,7 +103,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         
                         <!-- END PAGE BAR -->
                         <!-- BEGIN PAGE TITLE-->
-                        <h1 class="page-title"> Lawyer                            <small>home controls</small>
+                        <h1 class="page-title"> Labourer <small>home controls</small>
                         </h1>
                         <!-- END PAGE TITLE-->
                         <!-- END PAGE HEADER-->
@@ -131,7 +131,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <!-- END CONTAINER -->
             <!-- BEGIN FOOTER -->
             <div class="page-footer">
-                <div class="page-footer-inner">  &copy;Thanuz
+                <div class="page-footer-inner">  &copy;LaboursOnline
                     </div>
                 <div class="scroll-to-top">
                     <i class="icon-arrow-up"></i>

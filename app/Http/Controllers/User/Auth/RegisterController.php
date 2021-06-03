@@ -33,7 +33,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = 'user\home';
+    protected $redirectTo = '/user/login';
 
     /**
      * Create a new controller instance.
@@ -91,13 +91,14 @@ class RegisterController extends Controller
 
 
 
+
         return User::create([
             
             'city_id' => $data['city_id'],
             'email' => $data['email'],
             'user_name' => $data['name'],
             'contact' => $data['contact'],
-            'image' =>$imageName,
+            'image' => $imageName,
             'password' => bcrypt($data['password']),
             'nation_id'=> $data['nation'],
             'state_id'=> $data['state'],
@@ -191,7 +192,7 @@ class RegisterController extends Controller
         // $this->guard()->login($user);
 
         return $this->registered($request, $user)
-                        ?: redirect($this->redirectPath());
+                        ?: redirect($this->redirectPath('user/login'));
     }
 
 

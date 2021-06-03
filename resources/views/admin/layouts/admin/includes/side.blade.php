@@ -126,33 +126,42 @@
                             </li> -->
                             <li class="nav-item  ">
                                 <a href="javascript:;" class="nav-link nav-toggle">
-                                    <i class="fa fa-gavel" aria-hidden="true"></i>
-                                    <span class="title">Cases</span>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <span class="title">Shops</span>
                                     <span class="arrow"></span>
                                 </a>
-                                <ul class="sub-menu">
+                                 <ul class="sub-menu">   
+                                    <!--<li class="nav-item  ">
+                                        <a href="{{URL::route('admin.shop.create')}}" class="nav-link ">
+                                            <span class="title">Add Shops</span>
+                                        </a>
+                                    </li>-->
+                           
                                     <li class="nav-item  ">
-                                        <!-- <a href="{{URL::route('admin.shop.index')}}" class="nav-link "> -->
-                                            <span class="title">View</span>
+                                        <a href="{{URL::route('admin.shop.index')}}" class="nav-link ">
+                                            <span class="title">View Shops </span>
                                         </a>
                                     </li>
                                 </ul>
+                                
                             </li>
                              <li class="nav-item  ">
                                 <a href="javascript:;" class="nav-link nav-toggle">
-                                    <i class="fa fa-users" aria-hidden="true"></i>
-                                    <span class="title">Meeting</span>
+                                    <i class="fa fa-suitcase" aria-hidden="true"></i>
+                                    <span class="title">Tools</span>
                                     <span class="arrow"></span>
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item  ">
-                                        <!-- <a href="{{URL::route('admin.atm.index')}}" class="nav-link "> -->
-                                            <span class="title">View</span>
+                                         <a href="{{URL::route('admin.rent.index')}}" class="nav-link "> 
+                                            <span class="title">View Tools</span>
                                         </a>
                                     </li>
+
+                                    
                                 </ul>
                             </li>
-                            <li class="nav-item  ">
+                            <!--<li class="nav-item  ">
                                 <a href="javascript:;" class="nav-link nav-toggle">
                                     <i class="fa fa-credit-card " aria-hidden="true"></i>
                                     <span class="title">Invoice</span>
@@ -160,12 +169,12 @@
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item  ">
-                                        <!-- <a href="{{URL::route('admin.pumb.index')}}" class="nav-link "> -->
+                                         <a href="{{URL::route('admin.pumb.index')}}" class="nav-link "> 
                                             <span class="title">View</span>
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li>-->
                             
                             <!--  <li class="nav-item  ">
                                 <a href="javascript:;" class="nav-link nav-toggle">
@@ -278,25 +287,25 @@
                              -->
                             <li class="nav-item  ">
                                 <a href="javascript:;" class="nav-link nav-toggle">
-                                    <i class="fa fa-graduation-cap"></i>
-                                    <span class="title">Lawyers</span>
+                                    <i class="fa fa-user"></i>
+                                    <span class="title">Labourers</span>
                                     <span class="arrow"></span>
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item  ">
                                         <a href="{{URL::route('admin.emp.index')}}" class="nav-link ">
-                                            <span class="title">View Lawyers</span>
+                                            <span class="title">View Labourer</span>
                                         </a>
                                     </li>
                                     <li class="nav-item  ">
                                         <a href="{{URL::route('admin.emp.create')}}" class="nav-link ">
-                                            <span class="title">Aprove Lawyers</span>
+                                            <span class="title">Aprove Labourer</span>
                                         </a>
                                     </li>
                                     
                                 </ul>
                             </li>
-                            <li class="nav-item  ">
+                           <!-- <li class="nav-item  ">
                                 <a href="?p=" class="nav-link nav-toggle">
                                     <i class="fa fa-user"></i>
                                     <span class="title">Clients</span>
@@ -310,7 +319,7 @@
                                     </li>
                                     
                                 </ul>
-                            </li>
+                            </li>-->
                             <!-- <li class="nav-item  ">
                                 <a href="javascript:;" class="nav-link nav-toggle">
                                     <i class="fa fa-file"></i>

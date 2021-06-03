@@ -24,7 +24,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <head>
         <meta charset="utf-8" />
-        <title>Client Login</title>
+        <title>Citizen Login</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="Preview page of Metronic Admin Theme #1 for " name="description" />
@@ -55,8 +55,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <body class=" login">
         <!-- BEGIN LOGO -->
         <div class="logo">
-            <a href="index.html">
-               <h1 style="color:white;font-weight: 1000;">Client<span style="color:red">Login</span></h2> </a>
+            <a href="{{URL('/')}}">
+               <h1 style="color:white;font-weight: 1050;">Citizen<span style="color:red">Login</span></h2> </a>
         </div>
         <!-- END LOGO -->
         <!-- BEGIN LOGIN -->
@@ -122,7 +122,7 @@ License: You must have a valid license purchased only from themeforest(the above
             
         </div>
         <div>
-        <div class="copyright"  style="color:black;"> © job.in. </div>
+        <div class="copyright"  style="color:black;"> © Labours Online. </div>
         </div>
         <!--[if lt IE 9]>
 <script src="../assets/global/plugins/respond.min.js"></script>

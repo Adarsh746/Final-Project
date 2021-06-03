@@ -112,7 +112,7 @@ class UserController extends Controller
          $user =User::find($id);
         $user ->approval_status = 1;
         $user ->save();
-        return redirect('franchise/user/create')->with('success','updated');
+        return redirect('franchise/user/create')->with('success','Approved');
          }
     /**
      * Remove the specified resource from storage.

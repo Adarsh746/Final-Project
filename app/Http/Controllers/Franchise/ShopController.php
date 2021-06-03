@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Shop;
 use App\User;
 use App\Local_place;
-use Illuminate\Support\Facades\Auth;
+
 
 class ShopController extends Controller
 {
@@ -18,24 +18,13 @@ class ShopController extends Controller
      */
     public function index()
     {
-
-        $user = Auth::user();
-         $user_post = $user->post_office_id;
-         
-         $cty = DB::table('local_places')
-         ->where('post_office_id',$user_post)
-         ->get();
-        foreach ($cty as $index => $value) {
-            $city_id[$index] = $value->place_id;
-        }
-
+       
       $shop = DB::table('shops')
 ->join('local_places','local_places.place_id','=','shops.city_id')
 ->join('users','users.user_id','=','shops.user_id')
 
 
 ->select('shops.shop_id','shops.city_id','users.user_name','shops.shop_name','shops.shop_cat_name','shops.image1','shops.image2','shops.image3','shops.image4','shops.image5','shops.address','shops.logo','shops.banner','shops.website','shops.facebook','shops.twitter','shops.instagram','shops.whatsapp','shops.open_time','shops.youtube','shops.close_time','shops.mobile_number','shops.mobile_number2','local_places.place_name')
-->whereIn('shops.city_id',$city_id)
 // ->where(['states.status', '=',0, 'nations.status' ,'=', 0])
 ->where('shops.status', '=', 0)
 ->get();
@@ -52,22 +41,12 @@ class ShopController extends Controller
      */
     public function create()
     {
-        $user = Auth::user();
-         $user_post = $user->post_office_id;
-         
-         $cty = DB::table('local_places')
-         ->where('post_office_id',$user_post)
-         ->get();
-        foreach ($cty as $index => $value) {
-            $city_id[$index] = $value->place_id;
-        }
     
-   $user =User::select('user_id','user_name')->get();
+   
    $city =Local_place::select('place_id','place_name')
-   ->whereIn('place_id',$city_id)
    ->get();
 
-    return view('franchise.add_shop', compact('user','city'));
+    return view('franchise.add_shop', compact('city'));
   }
 
     // /**
@@ -149,7 +128,7 @@ class ShopController extends Controller
 
              $shop = new shop();
             $shop->city_id = $request->place_id;
-            $shop->user_id = $request->user_id;
+            // $shop->user_id = $request->user_id;
             $shop->shop_name = $request->shop_name;
             $shop->shop_cat_name = $request->shop_cat_name;
             $shop->address = $request->address;
@@ -210,7 +189,8 @@ class ShopController extends Controller
      */
     public function show($id)
     {
-        //
+     //
+        
     }
 
     /**
@@ -221,19 +201,10 @@ class ShopController extends Controller
      */
     public function edit($id)
     {
-        $user = Auth::user();
-         $user_post = $user->post_office_id;
-         
-         $cty = DB::table('local_places')
-         ->where('post_office_id',$user_post)
-         ->get();
-        foreach ($cty as $index => $value) {
-            $city_id[$index] = $value->place_id;
-        }
 
         $shop = DB::table('shops')
 ->join('local_places','local_places.place_id','=','shops.city_id')
-->join('users','users.user_id','=','shops.user_id')
+
 ->where('shops.shop_id', '=', $id)
 
 
@@ -243,12 +214,11 @@ class ShopController extends Controller
 
 ->first();
 
-$user =User::select('user_id','user_name')->get();
+
    $city =Local_place::select('place_id','place_name')
-   ->whereIn('place_id',$city_id)
    ->get();
 
-    return view('franchise.edit_shop', compact('user','city','shop'));
+    return view('franchise.edit_shop', compact('city','shop'));
 
     }
 
@@ -330,7 +300,7 @@ $user =User::select('user_id','user_name')->get();
 
              $shop = shop::find($id);
             $shop->city_id = $request->place_id;
-            $shop->user_id = $request->user_id;
+          
             $shop->shop_name = $request->shop_name;
             $shop->shop_cat_name = $request->shop_cat_name;
             $shop->address = $request->address;
@@ -386,7 +356,7 @@ $user =User::select('user_id','user_name')->get();
         //         $state->state_name = $request->state_name;
                 
         //         $state->save();
-        //         return redirect()->route('franchise.state.index')->with('success','Updated');
+        //         return redirect()->route('admin.state.index')->with('success','Updated');
     }
 
     /**

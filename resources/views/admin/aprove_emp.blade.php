@@ -6,7 +6,7 @@
         <div class="portlet-title">
             <div class="caption">
                 <i class="icon-settings font-red"></i>
-                <span class="caption-subject font-red sbold uppercase">Lawyer Request</span>
+                <span class="caption-subject font-red sbold uppercase">Labourer Request</span>
             </div>
 
         </div>
@@ -15,7 +15,7 @@
                 <div class="table-scrollable">
                     <table class="table table-striped table-hover table-bordered dataTable no-footer" id="sample_editable_1" role="grid" aria-describedby="sample_editable_1_info">
                         <thead>
-                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 139px;" aria-sort="ascending" aria-label="district_id : activate to sort column descending"> Lawyer id</th>
+                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 139px;" aria-sort="ascending" aria-label="district_id : activate to sort column descending"> Labourer id</th>
 
                             <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label="  Name : activate to sort column ascending">Name</th>
 
@@ -27,9 +27,13 @@
                             <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" district : activate to sort column ascending">District</th>
                             <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" email : activate to sort column ascending">Email</th>
 
+                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" aadhar_number : activate to sort column ascending">Aadhaar Id</th>
+                            
+                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" Skills : activate to sort column ascending">Skills</th>
+
                           
                            
-                                                       <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 98px;" aria-label=" aprove : activate to sort column ascending"> Approve</th>
+                              <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 98px;" aria-label=" aprove : activate to sort column ascending"> Approve</th>
 
                             <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 98px;" aria-label=" Delete : activate to sort column ascending"> Delete </th>
                         </tr>
@@ -45,6 +49,8 @@
                                 <td>{{ $value->state_name }} </td>
                                 <td>{{ $value->district_name }} </td>
                                 <td>{{ $value->email }} </td>
+                                <td>{{ $value->aadhar_number }} </td>
+                                <td>{{ $value->skills }} </td>
                                
                                
 

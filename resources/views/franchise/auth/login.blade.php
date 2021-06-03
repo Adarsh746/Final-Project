@@ -24,7 +24,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <head>
         <meta charset="utf-8" />
-        <title>Legis Eye</title>
+        <title>Labours Online</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="Preview page of Metronic Admin Theme #1 for " name="description" />
@@ -55,8 +55,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <body class=" login">
         <!-- BEGIN LOGO -->
         <div class="logo">
-            <a href="index.html">
-               <h1 style="color:white;font-weight: 1000;">Legis Eye</span></h2> </a>
+            <a href="{{URL('/')}}">
+               <h1 style="color:black;font-weight: 1050;">LABOURS ONLINE</span></h2> </a>
         </div>
         <!-- END LOGO -->
         <!-- BEGIN LOGIN -->
@@ -64,7 +64,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <!-- BEGIN LOGIN FORM -->
             <form class="login-form"  method="POST" action="{{ route('franchise.login') }}">
             {{ csrf_field() }}
-            <h3 class="form-title font-red">Lawyer</h3>
+            <h3 class="form-title font-red">Labourer</h3>
                 <h3 class="form-title font-green">Sign In</h3>
                 <div class="alert alert-danger display-hide">
                     <button class="close" data-close="alert"></button>
@@ -113,7 +113,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <h3 class="font-green">Forget Password ?</h3>
                 <p> Enter your e-mail address below to reset your password. </p>
                 <div class="form-group">
-                    <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" /> </div>
+                    <input class="form-control placeholder-no-fix" type="text" autocomplete="on" placeholder="Email" name="email" /> </div>
                 <div class="form-actions">
                     <button type="button" id="back-btn" class="btn green btn-outline">Back</button>
                     <button type="submit" class="btn btn-success uppercase pull-right">Submit</button>
@@ -123,7 +123,7 @@ License: You must have a valid license purchased only from themeforest(the above
             
         </div>
         <div>
-        <div class="copyright"  style="color:black;"> ©LegisEye </div>
+        <div class="copyright"  style="color:black;"> ©LaboursOnline </div>
         </div>
         <!--[if lt IE 9]>
 <script src="../assets/global/plugins/respond.min.js"></script>

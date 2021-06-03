@@ -44,7 +44,7 @@
                                 <td>{{ $value->state_name }} </td>
                                 <td>{{ $value->district_name }} </td>
                                
-                               <td><a href="/user/images/{{$value->image }}">{{ $value->image}}</a> </td>
+                               <td class="sorting_11"> <img class="dt-img" src="/user/images/{{ $value->image}}"></td>
                                
 
                                 <td>{{ $value->email }} </td>

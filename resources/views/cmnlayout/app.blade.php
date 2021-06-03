@@ -34,7 +34,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!-- BEGIN LOGO -->
                     <div class="page-logo">
                         <a href="index.html">
-                        <h4 style="color:white ;font-size: 26px;font-weight: 1000;margin-left: 15px;"><span style="color:red">Thanuz</span></h2> </a>
+                        <h4 style="color:white ;font-size: 26px;font-weight: 1000;margin-left: 15px;"><span style="color:red">LaboursOnline</span></h2> </a>
                         </a>
                         <div class="menu-toggler sidebar-toggler">
                             <span></span>

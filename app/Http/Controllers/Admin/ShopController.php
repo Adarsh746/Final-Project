@@ -92,7 +92,7 @@ class ShopController extends Controller
         base_path() . '/public/shop/images/', $imageName4
     );
       }
-      if ($request['image3']) {
+      if ($request['image5']) {
         $imageName5 = time() . '5.' . $request->file('image5')->Extension();
         $request['image5']->move(
         base_path() . '/public/shop/images/', $imageName5

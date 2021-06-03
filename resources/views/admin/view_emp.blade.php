@@ -6,7 +6,7 @@
         <div class="portlet-title">
             <div class="caption">
                 <i class="icon-settings font-red"></i>
-                <span class="caption-subject font-red sbold uppercase">Lawyer</span>
+                <span class="caption-subject font-red sbold uppercase">Labourer</span>
             </div>
 
         </div>
@@ -15,48 +15,57 @@
                 <div class="table-scrollable">
                     <table class="table table-striped table-hover table-bordered dataTable no-footer" id="sample_editable_1" role="grid" aria-describedby="sample_editable_1_info">
                         <thead>
-                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 139px;" aria-sort="ascending" aria-label="district_id : activate to sort column descending"> Lawyer id</th>
+                        <tr role="row">
+                            <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 139px;" aria-sort="ascending" aria-label="district_id : activate to sort column descending"> Image</th>
+                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label="  Name : activate to sort column ascending">Labourer Id</th>
 
                             <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label="  Name : activate to sort column ascending">Name</th>
 
                             <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" mobile: activate to sort column ascending">Mobile</th>
+
+
                            
                             <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" nation : activate to sort column ascending">Nation</th>
                             <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" state : activate to sort column ascending">State</th>
                             
                             <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" district : activate to sort column ascending">District</th>
-                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" email : activate to sort column ascending">Email</th>
-                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 98px;" aria-label=" Delete : activate to sort column ascending"> Delete </th>
+                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" district : activate to sort column ascending">Place</th>
+                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" district : activate to sort column ascending">post</th>
+                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" email :   activate to sort column ascending">Email</th>
+                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" aadhar_number : activate to sort column ascending">skills </th>
+                            
+
+                            <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" aadhar_number : activate to sort column ascending">Aadhaar Id</th>
+                            
+                            <!--<th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 162px;" aria-label=" Skills : activate to sort column ascending">Skills</th>-->
+                           <!-- <th class="sorting" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width: 98px;" aria-label=" Delete : activate to sort column ascending"> Edit </th> -->
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($emp as $value)
 
                             <tr role="row" class="odd">
-                                <td class="sorting_1"> {{ $value->franchise_id }}</td>
+                                <td class="sorting_1">
+                                <img class="dt-img" style="max-height:150px; max-width:150px;" src="/franchise/images/{{ $value->image}}"></td>
+                                <td> {{ $value->franchise_id }}</td>
                                 <td>{{ $value->franchise_name }} </td>
+
                                 <td>{{ $value->contact }} </td>
                                 <td>{{ $value->nation_name }} </td>
                                 <td>{{ $value->state_name }} </td>
                                 <td>{{ $value->district_name }} </td>
                                 <td>{{ $value->email }} </td>
-                              
-                               
-
+                                <td>{{ $value->curr_address }} </td>
+                                <td>{{ $value->post_office_name }} </td>
+                                 <td>{{ $value->skills }} </td>
                                 
-                                <td class="text-center">
+                                <td>{{ $value->aadhar_number }} </td>
 
-                                <form method="POST" action="{{route('admin.emp.destroy',$value->franchise_id)}}">
-                                    {{ csrf_field() }}
-                                    <input name="_method" type="hidden" value="DELETE">
-                                    <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-outline btn-circle green btn-sm blue delConfirm">
-                                    <i class="fa fa-trash-o"></i> Delete</a>
-                                    </button>
+
 
                                
-                                                               
-                                                               
-                                </td>
+
+                               
                             </tr>
                         @endforeach
                         </tbody>
@@ -87,7 +96,7 @@
 @endpush
 
 @push('confirmdel')
-    <script>
+   <!-- <script>
         function dlt(dle) {
             if(confirm('are you sure')) {
                 $form = $('<form  method="post" action="' + dle + '"></form>');
@@ -106,5 +115,5 @@
             toastr.success('{{session()->get('success')}}');
             @endif
         });
-    </script>
+    </script>-->
         @endpush

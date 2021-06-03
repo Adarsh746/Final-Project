@@ -12,7 +12,7 @@
     margin: auto;
 }
 header{
-    background: url("/images/homebg.jpg");
+    background: url("/images/construction.jpg");
     height:100vh;
     -webkit-background-size:cover;
     background-size:    cover;
@@ -38,8 +38,8 @@ header{
     font-size: 16px;
 }
 .nav-area li a:hover{
-    background: #fff; 
-    color: #444;    
+    background: #000;
+    color: #fff;    
 }
 .logo img{
     width: 100px;
@@ -58,7 +58,19 @@ header{
     color: #fff;
     text-transform: uppercase;
     font-size: 60px;
+    font-family: Cursive;
 
+}
+.caption-text {
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    font-family: Cursive;
+     position: absolute;
+     width: 600px;
+    height: 300px;
+    margin: 30% 30%;
+   
 }
 .welcome-text a{
 
@@ -80,21 +92,24 @@ header{
 </head>
 <body>
     <header >
-     <div class="wrapper">
+     <div class="center">
         <div class="logo">
-            <img src="/images/Lawyer.jpg" alt="">
+            <img src="/images/logo1.jpg" alt="">
         </div>
+        
         <ul class="nav-area">
-            <li><a href="{{route('admin.login')}}">Admin</li>
-                <li><a href="{{route('franchise.login')}}">Lawyer</li>
-                    <li><a href="{{route('user.login')}}">Client</li>
+            <li><a href="{{route('admin.login')}}">Admin</a></li>
+                <li><a href="{{route('franchise.login')}}">Labour</a></li>
+                    <li><a href="{{route('user.login')}}">User</a></li>
         </ul>
     </div>  
     <div class="welcome-text">
-        <h1>Legis Eye</h1>
-
-
+        <h1>Labours Online</h1>
     </div>
+    <div class="caption-text">
+       <h4>"No Human Masterpeice Has Been Created  
+       Without Great Labour" </h4> 
+    </div>>
 
     </header>
 

@@ -20,11 +20,13 @@ class EmpController extends Controller
         ->leftjoin('nations', 'franchises.nation_id', '=', 'nations.nation_id')
         ->leftjoin('states', 'franchises.state_id', '=', 'states.state_id')
         ->leftjoin('districts', 'districts.district_id', '=', 'franchises.district_id')
-        ->select('franchises.franchise_id','franchises.email','franchises.franchise_name','franchises.contact','nations.nation_name','states.state_name','districts.district_name','franchises.email')
+        ->leftjoin('post_offices', 'post_offices.post_office_id', '=', 'franchises.post_office_id')
+        ->select()
         ->where('franchises.account_status', '=', 0)
         ->where('franchises.aproval_status', '=', 1)
         
-        ->get();        
+        ->get(); 
+               
                 
         return view('admin.view_emp', compact('emp'));
 
@@ -42,7 +44,7 @@ class EmpController extends Controller
         ->leftjoin('nations', 'franchises.nation_id', '=', 'nations.nation_id')
         ->leftjoin('states', 'franchises.state_id', '=', 'states.state_id')
         ->leftjoin('districts', 'districts.district_id', '=', 'franchises.district_id')
-        ->select('franchises.franchise_id','franchises.email','franchises.franchise_name','franchises.contact','nations.nation_name','states.state_name','districts.district_name','franchises.email')
+        ->select()
         ->where('franchises.aproval_status', '=', 0)
         ->where('franchises.account_status', '=', 0)
         

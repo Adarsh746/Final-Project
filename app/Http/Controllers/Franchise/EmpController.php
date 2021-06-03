@@ -15,7 +15,7 @@ class EmpController extends Controller
      */
     public function index()
     {
-    dd('hi');
+    //dd('hi');
         $emp =DB::table('franchises')
         ->leftjoin('nations', 'franchises.nation_id', '=', 'nations.nation_id')
         ->leftjoin('states', 'franchises.state_id', '=', 'states.state_id')
@@ -26,7 +26,7 @@ class EmpController extends Controller
         ->where('franchises.account_status', '=', 0)
         ->where('franchises.franchise_id', '=', Auth::user()->franchise_id )
 
-        ->first();        
+        ->get();        
         
         
        
@@ -95,6 +95,83 @@ class EmpController extends Controller
     return redirect(route('franchise.login'));
 
     }
+    public function edit()
+    {
+
+        $emp =DB::table('franchises')
+        ->leftjoin('nations', 'franchises.nation_id', '=', 'nations.nation_id')
+        ->leftjoin('states', 'franchises.state_id', '=', 'states.state_id')
+        ->leftjoin('districts', 'districts.district_id', '=', 'franchises.district_id')
+        // ->where('franchises.franchise_id', '=', $id)
+        ->select()
+        ->where('franchises.account_status', '=', 0)
+        ->where('franchises.franchise_id', '=', Auth::user()->franchise_id )
+
+        
+    //$this->authorize('modifyFranchises', auth()->user());
+    ->first(); 
+    
+        
+         
+        return view('franchise.edit', compact('emp'));       
+    }
+    public function change(Request $request, $id)
+    {
+       
+     
+
+        // $franchise = (Auth::user()->franchise_id);
+        // // $rent = Auth::rent();
+        $image1 = null;
+       
+     if ($request['image']) {
+        $image = time() . '1.' . $request->file('image')->Extension();
+        $request['image']->move(
+        base_path() . '/public/franchise/images/', $image1
+    );
+      }
+      
+       // $this->validate($request, [
+       //     'tool_name' => 'required',
+       //     'place_id' => 'required',
+       //     'tool_image' => 'required',
+       //     'tool_count' => 'required'
+           
+
+         // ]);
+           $emp =Franchise::find($id);
+
+            $emp ->franchise_name = $request->franchise_name;   
+            $emp ->email = $request->email;
+            
+            $emp ->contact = $request->contact;
+            $emp ->curr_address = $request->curr_address;
+            $emp ->contact1 = $request->contact1;
+           
+            if($image1){
+                     $emp->image = $image1;
+                }
+                
+               $emp->save();
+                
+             
+
+          // return view('table');
+        return redirect()->route('franchise.emp.index')->with('success','Edited Successfully');
+
+        // $this->validate($request, [
+        //     'state_name' => 'required',
+        //     'nation_id' => 'required',
+
+        // ]);
+
+        //         $state = state::find($id);
+        //         $state->nation_id = $request->nation_id;
+        //         $state->state_name = $request->state_name;
+                
+        //         $state->save();
+        //         return redirect()->route('admin.state.index')->with('success','Updated');
+    }
 
     /**
      * Display the specified resource.
@@ -102,17 +179,25 @@ class EmpController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
 
+
         $emp =DB::table('franchises')
+       
         ->leftjoin('nations', 'franchises.nation_id', '=', 'nations.nation_id')
         ->leftjoin('states', 'franchises.state_id', '=', 'states.state_id')
         ->leftjoin('districts', 'districts.district_id', '=', 'franchises.district_id')
-        ->first();
-        $nat =Nation::select('nation_id','nation_name')->get();
+        ->join('post_offices', 'franchises.post_office_id', '=', 'post_offices.post_office_id')
+        ->select('franchises.franchise_id','franchises.email','franchises.franchise_name','franchises.contact','nations.nation_name','states.state_name','districts.district_name','franchises.curr_address','post_offices.pincode','franchises.email','franchises.aadhar_number')
+        ->where('franchises.account_status', '=', 0)
+        ->where('franchises.aproval_status', '=', 1)
+        
+        
+        ->get();        
+                
+        return view('franchise.view_emp', compact('emp'));
 
-        return view('franchise.edit',compact('nat','emp'));
     }
 
     /**
@@ -121,10 +206,7 @@ class EmpController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
+    
 
     /**
      * Update the specified resource in storage.

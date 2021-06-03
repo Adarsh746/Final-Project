@@ -46,8 +46,16 @@
                                 </a>
                                 
                             </li>
+                            <li class="nav-item start ">
+                                <a href="{{URL::route('franchise.emp.edit')}}" class="nav-link nav-toggle">
+                                    <i class="icon-user"></i>
+                                    <span class="title">Edit Profile</span>
+                                   
+                                </a>
+                                
+                            </li>
                             <li class="heading">
-                                <h3 class="uppercase">Features</h3>
+                                <h3 class="uppercase">Activities</h3>
                             </li>
                           
                            
@@ -56,37 +64,98 @@
                              <li class="nav-item  ">
                                 <a href="javascript:;" class="nav-link nav-toggle">
                                     <i class="fa fa-gavel" aria-hidden="true"></i>
-                                    <span class="title">Cases</span>
+                                    <span class="title"> Tools</span>
                                     <span class="arrow"></span>
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item  ">
-                                        <a href="{{URL::route('franchise.atm.index')}}" class="nav-link ">
-                                            <span class="title">View</span>
+                                        <a href="{{URL::route('franchise.rent.index')}}" class="nav-link ">
+                                            <span class="title">View Tools</span>
+                                        </a>
+                                    </li>
+                                
+                                
+                                    <li class="nav-item  ">
+                                        <a href="{{URL::route('franchise.tool.index')}}" class="nav-link ">
+                                            <span class="title">My Tools</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                        <a href="{{URL::route('franchise.book.index')}}" class="nav-link ">
+                                            <span class="title">My Bookings</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                        <a href="{{URL::route('franchise.book.show')}}" class="nav-link ">
+                                            <span class="title">Tool Request</span>
                                         </a>
                                     </li>
                                 </ul>
                             </li> 
- <!-- <li class="nav-item  ">
+                               <li class="nav-item  ">
                                 <a href="javascript:;" class="nav-link nav-toggle">
-                                    <i class="fa fa-list-alt"></i>
-                                    <span class="title">Chat</span>
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="title">Shops</span>
                                     <span class="arrow"></span>
                                 </a>
                                 <ul class="sub-menu">
                                    
-                                    <li class="nav-item  ">
-                                        <a href="javascript:;" class="nav-link nav-toggle">
-                                            
-                                            <span class="title">Shopping products
-                                                </span>
-                                                <span class="arrow"></span>
-                                        </a>
-                                        <ul class="sub-menu">
+                                    
                                             <li class="nav-item  ">
-                                                <a href="{{URL::route('franchise.shoppro.index')}}" class="nav-link ">
-                                                    <span class="title">View Shopping Products
-                                                    </span>
+                                                <a href="{{URL::route('franchise.shop.index')}}" class="nav-link ">
+                                                    <i class="fa fa-shopping-cart"></i>
+                                                    <span class="title">Search Shops</span>
+                                                    <span class="arrow"></span>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+                                    
+                                                            <li class="nav-item  ">
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                                    <i class="fa fa-suitcase"></i>
+                                    <span class="title">Work</span>
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                   
+                                    
+                                            <li class="nav-item  ">
+                                                <a href="{{URL::route('franchise.work.index')}}" class="nav-link ">
+                                                    <i class="fa fa-suitcase"></i>
+                                                    <span class="title">View Request</span>
+                                                    <span class="arrow"></span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item  ">
+                                                <a href="{{URL::route('franchise.work.change')}}" class="nav-link ">
+                                                    <i class="fa fa-suitcase"></i>
+                                                    <span class="title">My Works</span>
+                                                    <span class="arrow"></span>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+                                    
+                                
+                            
+                           <!--  <li>
+                            <li class="nav-item ">
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                                    <i class="fa fa-users"></i>
+                                    <span class="title">Work</span>
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                   
+                                    
+                                            <li class="nav-item  ">
+                                                <a href="{{URL::route('franchise.shop.index')}}" class="nav-link ">
+                                                    <i class="fa fa-users"></i>
+                                                    <span class="title">View Request</span>
+                                                    <span class="arrow"></span>
                                                 </a>
                                             </li>
                                             
@@ -95,41 +164,28 @@
                                     
                                 </ul>
                             </li> -->
-                            <li class="nav-item  ">
+                             <!-- <li class="nav-item ">
                                 <a href="javascript:;" class="nav-link nav-toggle">
-                                    <i class="fa fa-users" aria-hidden="true"></i>
-                                    <span class="title">Meeting</span>
-                                    <span class="arrow"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item  ">
-                                        <a href="{{URL::route('franchise.shop.index')}}" class="nav-link ">
-                                            <span class="title">View</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                             <li class="nav-item  ">
-                                <a href="?p=" class="nav-link nav-toggle">
                                     <i class="fa fa-user"></i>
-                                    <span class="title">Clients</span>
+                                    <span class="title">Labourer</span>
                                     <span class="arrow"></span>
                                 </a>
                                 <ul class="sub-menu">
-                                    <li class="nav-item  ">
-                                        <a href="{{URL::route('franchise.user.index')}}" class="nav-link ">
-                                            <span class="title">View Clients</span>
-                                        </a>
-                                    </li>
+                                   
                                     
-                                    <li class="nav-item  ">
-                                        <a href="{{URL::route('franchise.user.create')}}" class="nav-link ">
-                                            <span class="title">Aprove clients</span>
-                                        </a>
+                                            <li class="nav-item  ">
+                                                <a href="{{URL::route('franchise.emp.show')}}" class="nav-link ">
+                                                    <i class="fa fa-user"></i>
+                                                    <span class="title">Search Laburer</span>
+                                                    <span class="arrow"></span>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
                                     </li>
                                     
                                 </ul>
-                            </li>
+                            </li>   -->
                             <!-- <li class="nav-item  ">
                                         <a href="javascript:;" class="nav-link nav-toggle">
                                             <i class="fa fa-building" aria-hidden="true"></i>

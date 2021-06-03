@@ -31,7 +31,7 @@ class HomeController extends Controller
         
         
 
-        $user = User::where('account_status', '=', 0)->count();
+        $franchise = franchise::where('account_status', '=', 0)->count();
         
 
         
@@ -40,7 +40,7 @@ class HomeController extends Controller
        
        
         
-        return view('admin/admin',compact('user'));
+        return view('admin/admin',compact('franchise'));
     }
 
     public function view()

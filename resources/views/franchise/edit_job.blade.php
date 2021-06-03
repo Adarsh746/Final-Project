@@ -12,14 +12,14 @@
                                                         <div class="portlet-title tabbable-line">
                                                     <div class="caption caption-md">
                                                         <i class="icon-globe theme-font hide"></i>
-                                                        <span class="caption-subject font-blue-madison bold uppercase">Job</span>
+                                                        <span class="caption-subject font-blue-madison bold uppercase">Profile</span>
                                                     </div>
                                                         <div class="tab-pane active" id="tab_1_1">
                                                             <form role="form"  method="POST" action="{{Route('employeer.job.update',$jobl->job_id)}}">
                                                                 <div class="form-group">
                                                                      {{ csrf_field() }}
                                                                      <input name="_method" type="hidden" value="PUT">
-                                                                    <input type="text" value="{{Auth::user()->employeer_id}}" class="form-control hidden" name="emp_id" /> </div>
+                                                                    <input type="text" value="{{Auth::user()->franchise_id}}" class="form-control hidden" name="emp_id" /> </div>
                                                                 <div class="form-group">
                                                                     <label class="control-label">Job Name</label>
                                                                     <input type="text" value="{{$jobl->job_name}}" placeholder="Job" class="form-control " name="job_name" /> 

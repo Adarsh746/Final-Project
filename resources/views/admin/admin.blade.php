@@ -26,15 +26,15 @@
                                     <div class="portlet-body form">
                                        
                                         <div class="mt-clipboard-container">
-                                        <h4 class="profile-desc-title bold" style="color:black">Site Status</h4>
+                                        <h4 class="profile-desc-title bold" style="color:black">System Status</h4>
                                         <div>
                                         <div class="portlet light ">
                                         <!-- STAT -->
                                         <div class="row list-separated profile-stat">
                                             
                                             <div class="col-md-4 col-sm-4 col-xs-4 text-center">
-                                                <div class="uppercase profile-stat-title bold"> {{ $user }} </div>
-                                                <div class="uppercase profile-stat-text bold" style="color:red"> No Of Clients</div>
+                                                <div class="uppercase profile-stat-title bold"> {{ $franchise }} </div>
+                                                <div class="uppercase profile-stat-text bold" style="color:red"> No Of Labourers</div>
                                             </div>
                                             
                                             

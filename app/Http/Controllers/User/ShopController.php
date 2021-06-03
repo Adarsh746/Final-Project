@@ -27,7 +27,6 @@ class ShopController extends Controller
 // ->where(['states.status', '=',0, 'nations.status' ,'=', 0])
 ->where('shops.status', '=', 0)
 ->get();
-dd($shop);
 
 
         // $state =State::select('nation_id','state_name','state_id')->get();
@@ -46,7 +45,7 @@ dd($shop);
    $city =Local_place::select('place_id','place_name')
    ->get();
 
-    return view('admin.add_shop', compact('user','city'));
+    return view('user.add_shop', compact('user','city'));
   }
 
     // /**
@@ -177,7 +176,7 @@ dd($shop);
                $shop->save();
 
           // return view('table');
-        return redirect()->route('admin.shop.index')->with('success','Registration Success');
+        return redirect()->route('user.shop.index')->with('success','Registration Success');
 
     }
 
@@ -217,7 +216,7 @@ $user =User::select('user_id','user_name')->get();
    $city =Local_place::select('place_id','place_name')
    ->get();
 
-    return view('admin.edit_shop', compact('user','city','shop'));
+    return view('user.edit_shop', compact('user','city','shop'));
 
     }
 
@@ -264,7 +263,7 @@ $user =User::select('user_id','user_name')->get();
         base_path() . '/public/shop/images/', $imageName4
     );
       }
-      if ($request['image3']) {
+      if ($request['image5']) {
         $imageName5 = time() . '5.' . $request->file('image5')->Extension();
         $request['image5']->move(
         base_path() . '/public/shop/images/', $imageName5
@@ -277,9 +276,9 @@ $user =User::select('user_id','user_name')->get();
     );
       }
       if ($request['logo']) {
-        $log = time() . '7.' . $request->file('logo')->Extension();
+        $logo = time() . '7.' . $request->file('logo')->Extension();
         $request['logo']->move(
-        base_path() . '/public/shop/images/', $logs
+        base_path() . '/public/shop/images/', $logo
     );
       }
         $this->validate($request, [
@@ -342,7 +341,7 @@ $user =User::select('user_id','user_name')->get();
                $shop->save();
 
           // return view('table');
-        return redirect()->route('admin.shop.index')->with('success','Updated');
+        return redirect()->route('user.shop.index')->with('success','Updated');
 
         // $this->validate($request, [
         //     'state_name' => 'required',
@@ -370,6 +369,6 @@ $user =User::select('user_id','user_name')->get();
         $matri ->status = 1;
         $matri ->save();
         
-        return redirect()->route('admin.shop.index')->with('success','deleted');
+        return redirect()->route('user.shop.index')->with('success','deleted');
     }
 }
